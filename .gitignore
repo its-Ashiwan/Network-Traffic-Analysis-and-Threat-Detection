@@ -1,20 +1,59 @@
-# Python
-__pycache__/
-*.py[cod]
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
 
-# Virtual Environments
-venv/
-.env
-
-# IDE
+# Editor files
 .vscode/
 .idea/
 
-# OS Files
-.DS_Store
-Thumbs.db
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 
-# Temporary Files
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# Temporary / backup files
 *.tmp
+*.temp
 *.bak
 *.swp
+
+# Do not ignore lab evidence by default
+# Uncomment only if PCAP files become too large for GitHub
+# *.pcap
+# *.pcapng# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# Temporary / backup files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Do not ignore lab evidence by default
+# Uncomment only if PCAP files become too large for GitHub
+# *.pcap
+# *.pcapng
