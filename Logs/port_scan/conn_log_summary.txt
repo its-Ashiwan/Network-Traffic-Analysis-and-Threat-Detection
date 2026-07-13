@@ -1,0 +1,46 @@
+==========================================================
+PORT SCAN LOG SUMMARY
+==========================================================
+
+Attack Name : TCP SYN Port Scan
+Attack Tool : Nmap
+Target Host : Ubuntu Monitoring System
+Attacker Host : Kali Linux
+
+----------------------------------------------------------
+Log Source
+----------------------------------------------------------
+
+Log File : conn.log
+
+----------------------------------------------------------
+Network Details
+----------------------------------------------------------
+
+Attacker IP      : 192.168.111.130
+Target IP        : 192.168.111.128
+Protocol         : TCP
+
+----------------------------------------------------------
+Observations
+----------------------------------------------------------
+
+• Multiple TCP SYN connection attempts were observed.
+• A single source IP attempted connections to multiple destination ports.
+• Several connections were rejected (REJ), indicating closed ports.
+• The connection pattern is consistent with reconnaissance activity.
+
+----------------------------------------------------------
+Evidence
+----------------------------------------------------------
+
+- Zeek conn.log
+- Wireshark Packet Capture
+- Nmap Scan Output
+
+----------------------------------------------------------
+Conclusion
+----------------------------------------------------------
+
+The traffic pattern indicates a TCP SYN Port Scan performed from
+192.168.111.130 against the Ubuntu monitoring system.
