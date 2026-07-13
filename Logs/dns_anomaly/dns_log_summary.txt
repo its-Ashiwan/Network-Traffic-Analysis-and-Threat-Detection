@@ -1,0 +1,35 @@
+====================================================
+DNS ANOMALY LOG SUMMARY
+====================================================
+
+Attack Type:
+DNS Anomaly Detection
+
+Log Source:
+Zeek dns.log
+
+Monitoring Tool:
+Zeek Network Security Monitor
+
+Attacker IP:
+192.168.111.130
+
+Target Network:
+192.168.111.0/24
+
+Protocol:
+DNS (UDP Port 53)
+
+Observed Activity:
+- High volume of DNS queries generated.
+- Multiple domain lookup requests observed.
+- Repeated DNS requests detected from a single host.
+- DNS traffic successfully captured and analyzed.
+
+Evidence:
+- Zeek dns.log
+- Wireshark Packet Capture
+- tcpdump Capture
+
+Detection Status:
+Suspicious DNS Activity Detected
