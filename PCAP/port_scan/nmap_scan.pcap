@@ -1,0 +1,44 @@
+# Nmap Scan PCAP
+
+## Overview
+
+This packet capture contains network traffic generated during a TCP SYN port scan performed using Nmap from the Kali Linux attacker machine against the Ubuntu target system.
+
+## Attack Details
+
+- **Attack Type:** TCP SYN Port Scan
+- **Tool Used:** Nmap
+- **Attacker Machine:** Kali Linux
+- **Target Machine:** Ubuntu
+- **Capture Tool:** tcpdump
+
+## File
+
+- `nmap_scan.pcap`
+
+## Analysis
+
+The packet capture was analyzed using Wireshark to identify reconnaissance activity. The scan generated multiple TCP SYN packets to different destination ports, helping identify open, closed, and filtered services on the target host.
+
+### Wireshark Filters Used
+
+```text
+tcp.flags.syn == 1
+```
+
+```text
+ip.addr == 192.168.111.130
+```
+
+*(Replace the IP address if your attacker IP is different.)*
+
+## Evidence Collected
+
+- TCP SYN packets captured
+- Multiple destination ports probed
+- Reconnaissance activity observed
+- Source and destination IP addresses identified
+
+## Learning Outcome
+
+This PCAP demonstrates how Nmap performs TCP SYN port scanning and how packet captures can be used to investigate reconnaissance activity during a SOC investigation.
