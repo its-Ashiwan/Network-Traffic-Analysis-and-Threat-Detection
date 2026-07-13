@@ -1,0 +1,43 @@
+# Aggressive Nmap Scan PCAP
+
+## Overview
+
+This packet capture contains network traffic generated during an aggressive Nmap port scanning attack performed from the Kali Linux attacker machine against the Ubuntu target system.
+
+## Attack Details
+
+- **Attack Type:** Aggressive TCP Port Scan
+- **Tool Used:** Nmap
+- **Attacker Machine:** Kali Linux
+- **Target Machine:** Ubuntu
+- **Capture Tool:** tcpdump
+
+## File
+
+- `aggressive_nmap_scan.pcap`
+
+## Analysis
+
+The PCAP was analyzed using Wireshark to investigate reconnaissance activity. Multiple TCP SYN packets targeting different destination ports were observed, indicating an aggressive port scan.
+
+### Wireshark Filters Used
+
+```text
+tcp.flags.syn == 1
+```
+
+```text
+ip.addr == 192.168.111.130
+```
+
+*(Replace the IP if your attacker IP is different.)*
+
+## Evidence Collected
+
+- Multiple SYN packets
+- Sequential probing of destination ports
+- High connection rate from a single source host
+
+## Learning Outcome
+
+This packet capture demonstrates how reconnaissance activity appears at the packet level and how Wireshark can be used to identify TCP SYN port scanning behavior.
