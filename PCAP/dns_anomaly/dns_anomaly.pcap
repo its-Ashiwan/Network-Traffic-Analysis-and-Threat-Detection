@@ -1,0 +1,62 @@
+# DNS Anomaly PCAP
+
+## Overview
+
+This directory contains the packet capture (PCAP) file generated during the DNS anomaly simulation. The traffic was captured using `tcpdump` and analyzed with Wireshark to investigate abnormal DNS behavior.
+
+---
+
+## File
+
+- `dns_anomaly.pcap` – Network packet capture containing DNS query traffic generated during the DNS anomaly attack simulation.
+
+---
+
+## Capture Details
+
+**Tool Used:** tcpdump
+
+**Capture Interface:** ens34
+
+**Capture Command:**
+
+```bash
+sudo tcpdump -i ens34 -w dns_anomaly.pcap
+```
+
+---
+
+## Wireshark Analysis
+
+### Display Filter
+
+```text
+dns
+```
+
+### Investigation Focus
+
+- Source IP generating DNS requests
+- Queried domain names
+- Query frequency
+- Failed DNS lookups (NXDOMAIN)
+- DNS request and response packets
+
+---
+
+## Objective
+
+The captured traffic was analyzed to:
+
+- Detect abnormal DNS query behavior
+- Identify excessive DNS requests from a single host
+- Support threat hunting using Zeek's `dns.log`
+- Validate custom Python-based DNS anomaly detection
+
+---
+
+## Related Files
+
+- `Zeek-Logs/dns_anomaly/dns.log`
+- `Detection-Scripts/dns_anomaly_detector.py`
+- `Incident-Reports/dns_anomaly_report.md`
