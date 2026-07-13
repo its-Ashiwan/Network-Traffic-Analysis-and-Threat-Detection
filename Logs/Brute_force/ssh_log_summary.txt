@@ -1,0 +1,33 @@
+==========================================
+SSH Log Summary
+==========================================
+
+Attack Type:
+SSH Brute Force
+
+Log Source:
+Zeek ssh.log
+
+Observation:
+- Multiple SSH sessions were recorded.
+- Repeated authentication attempts were observed.
+- Authentication did not succeed during the attack simulation.
+
+Attacker IP:
+192.168.111.130
+
+Target IP:
+192.168.111.128
+
+Service:
+SSH
+
+Authentication Status:
+Failed
+
+Evidence:
+- Several SSH connection attempts.
+- Repeated login activity from the same source IP.
+
+Conclusion:
+The observed SSH activity matches the behavior of an SSH brute-force attack.
