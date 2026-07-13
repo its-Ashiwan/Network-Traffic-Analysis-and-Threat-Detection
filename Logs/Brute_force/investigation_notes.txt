@@ -1,0 +1,41 @@
+==========================================
+SOC Investigation Notes
+==========================================
+
+Incident Name:
+SSH Brute Force Attack
+
+Severity:
+Medium
+
+Attack Phase:
+Credential Access
+
+Objective:
+Identify unauthorized attempts to gain SSH access using multiple password combinations.
+
+Investigation Process:
+1. Captured network traffic using tcpdump.
+2. Generated Zeek logs for network analysis.
+3. Examined conn.log for repeated SSH connections.
+4. Reviewed ssh.log for authentication attempts.
+5. Verified network traffic using Wireshark.
+6. Executed the custom Python brute-force detector.
+
+Findings:
+- A single host repeatedly attempted to access the SSH service.
+- The activity originated from 192.168.111.130.
+- SSH authentication attempts were unsuccessful.
+- The custom detection script successfully identified the suspicious behavior.
+
+Detection Status:
+Confirmed
+
+Recommendation:
+- Enable account lockout policies.
+- Use strong passwords or SSH key authentication.
+- Restrict SSH access using firewall rules.
+- Monitor repeated authentication failures through a SIEM solution.
+
+Final Verdict:
+The activity was identified as a simulated SSH brute-force attack conducted in a controlled lab environment for SOC analysis.
