@@ -1,0 +1,56 @@
+==========================================================
+SOC INVESTIGATION NOTES
+==========================================================
+
+Incident ID:
+PS-001
+
+Attack Type:
+TCP SYN Port Scan
+
+Severity:
+Medium
+
+Status:
+Investigated
+
+----------------------------------------------------------
+Investigation Summary
+----------------------------------------------------------
+
+During traffic monitoring, multiple TCP SYN packets were detected
+originating from a single source IP.
+
+The attacker attempted connections to numerous destination ports
+within a short time period.
+
+Analysis of conn.log confirmed repeated connection attempts,
+while Wireshark packet captures verified SYN packets targeting
+multiple services.
+
+----------------------------------------------------------
+Indicators of Compromise (IOCs)
+----------------------------------------------------------
+
+Attacker IP:
+192.168.111.130
+
+Target IP:
+192.168.111.128
+
+Technique:
+TCP SYN Port Scan
+
+Tools Used for Investigation:
+- Zeek
+- Wireshark
+- Python Detection Script
+
+----------------------------------------------------------
+Recommendation
+----------------------------------------------------------
+
+• Monitor repeated reconnaissance attempts.
+• Block malicious source IP if confirmed.
+• Enable firewall logging.
+• Configure IDS/IPS rules to detect abnormal scanning activity.
