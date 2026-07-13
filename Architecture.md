@@ -89,6 +89,6 @@ Incident Report
 - Generated Zeek logs for investigation.
 - Developed Python-based detection scripts for automated threat detection.
 - Documented findings through incident reports.
-<img width="844" height="1864" alt="architecture" src="https://github.com/user-attachments/assets/aa4a1ef1-4a4b-4a13-80bb-4cc70e0120a3" />
+
 
 
