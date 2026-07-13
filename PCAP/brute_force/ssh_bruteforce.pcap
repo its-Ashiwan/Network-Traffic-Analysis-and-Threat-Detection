@@ -1,0 +1,54 @@
+# SSH Brute Force PCAP
+
+## Overview
+
+This packet capture contains network traffic generated during an SSH brute-force attack simulation performed in a controlled virtual lab environment.
+
+## Objective
+
+The purpose of this capture is to analyze SSH authentication attempts and investigate brute-force behavior using packet-level evidence.
+
+## Attack Details
+
+- **Attack Type:** SSH Brute Force
+- **Attacker Machine:** Kali Linux
+- **Target Machine:** Ubuntu Server
+- **Protocol:** SSH
+- **Destination Port:** 22
+
+## Capture Method
+
+The traffic was captured on the Ubuntu monitoring system using:
+
+```bash
+sudo tcpdump -i ens34 -w ssh_bruteforce.pcap
+```
+
+## Wireshark Analysis
+
+The PCAP file was analyzed using Wireshark with the following display filter:
+
+```text
+tcp.port == 22
+```
+
+The analysis revealed:
+
+- Multiple SSH connection attempts from the attacker.
+- TCP three-way handshake packets.
+- SSH protocol negotiation.
+- Repeated authentication attempts indicating brute-force activity.
+
+## SOC Investigation
+
+During the investigation, the following artifacts were identified:
+
+- Attacker IP Address
+- Target IP Address
+- SSH Session Establishment
+- Repeated Login Attempts
+- Network-level Evidence of Brute Force Attack
+
+## Outcome
+
+The captured traffic successfully demonstrated SSH brute-force behavior and was further correlated with Zeek logs (`conn.log` and `ssh.log`) and custom Python detection scripts for incident analysis.
