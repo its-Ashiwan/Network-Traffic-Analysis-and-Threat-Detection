@@ -1,0 +1,33 @@
+==========================================
+Connection Log Summary
+==========================================
+
+Attack Type:
+SSH Brute Force
+
+Log Source:
+Zeek conn.log
+
+Observation:
+- Multiple TCP connections were initiated from a single source IP to the target system over SSH (Port 22).
+- The repeated connection attempts occurred within a short time period.
+- Connection behavior is consistent with brute-force password guessing.
+
+Source IP:
+192.168.111.130
+
+Destination IP:
+192.168.111.128
+
+Protocol:
+TCP
+
+Destination Port:
+22
+
+Evidence:
+- Multiple connection entries from the same source host.
+- Repeated access attempts to SSH service.
+
+Conclusion:
+The connection pattern indicates a possible SSH brute-force attack against the Ubuntu target.
