@@ -1,0 +1,44 @@
+====================================================
+SOC INVESTIGATION NOTES
+====================================================
+
+Incident ID:
+DNS-001
+
+Incident Type:
+DNS Anomaly
+
+Severity:
+Medium
+
+Investigation Summary:
+A high number of DNS requests were generated from a single host during the monitoring period. The activity was identified through Zeek dns.log analysis and validated using Wireshark packet inspection.
+
+Analysis Performed:
+- Reviewed dns.log
+- Identified source IP generating DNS traffic
+- Verified DNS packets using Wireshark
+- Executed custom Python DNS anomaly detector
+
+Findings:
+- Source IP generated repeated DNS queries.
+- DNS request volume exceeded normal behavior.
+- Activity matched DNS anomaly detection logic.
+
+Detection Method:
+Custom Python Script
+Zeek Log Analysis
+
+Evidence Collected:
+- dns.log
+- dns_anomaly.pcap
+- Wireshark Screenshots
+- Python Detection Output
+
+Conclusion:
+The DNS activity was classified as suspicious due to the unusually high number of DNS requests generated from a single source host.
+
+Recommended Actions:
+- Monitor DNS traffic continuously.
+- Investigate repeated DNS requests.
+- Configure DNS monitoring alerts.
